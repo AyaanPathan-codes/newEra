@@ -859,6 +859,46 @@ body {
     margin-bottom: -250px;
 }
    
+footer {
+    background-color: #000; /* Black background */
+    color: #D2B48C; /* Darker beige/tan text color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-links, .footer-contact, .footer-socials {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.footer-links a,
+.footer-socials a {
+    color: #D2B48C;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #D2B48C; /* Light border for separation */
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
 /* Media Queries for Small Screens */
 @media (max-width: 600px) { 
     
@@ -866,7 +906,7 @@ body {
     display: flex;
     justify-content: flex-end;
     padding: 10px 10px;
-    margin: 0;
+    margin: 0px -20px;
     background-color: transparent; /* Transparent background */
     z-index: 10; /* Ensure navbar stays above other elements */
     position: fixed; /* Fix it to the top of the page */
@@ -880,16 +920,17 @@ body {
 
 #nav a:nth-child(1) {
     margin-right: auto;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 900;
 } 
 
 #nav a {
     text-decoration: none;
     color: beige;
-    padding: 10px 10px;
-    font-size: 15px;
+    padding: 10px 7px;
+    font-size: 7px;
     font-weight: 700;
+    margin-left: 100px;
 }
 
 #nav i {
