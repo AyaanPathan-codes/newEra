@@ -61,10 +61,9 @@ html, body {
 #video {
     position: relative; /* Create a positioning context for absolute children */
     overflow: hidden; /* Ensure content doesn't overflow */
-    height: 100vh; /* Full height of the viewport */
-    background: linear-gradient(to bottom, rgba(white), transparent);
+    height: 100vh; /* Full height of the viewport*/
+    
 }
-
 #video video {
     height: 100%; /* Full height of the container */
     width: 100%; /* Full width of the container */
@@ -298,9 +297,15 @@ body {
     margin-top: 20px;
     position: relative;
     overflow: hidden;
+    display: flex; /* Use flex to center items */
+    flex-direction: column; /* Stack items vertically */
 }
 
-.slider .list .item{
+.slider .list {
+    flex: 1; /* Allow the list to take up the remaining space */
+}
+
+.slider .list .item {
     position: absolute;
     inset: 0 0 0 0;
     overflow: hidden;
@@ -308,23 +313,24 @@ body {
     transition: .5s;
     color: beige;
 }
-.slider .list .item img{
+
+.slider .list .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.slider .list .item::after{
+
+.slider .list .item::after {
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(
-        to top, #000 3%, transparent
-    );
+    background-image: linear-gradient(to top, #000 3%, transparent);
 }
-.slider .list .item .content{
+
+.slider .list .item .content {
     position: absolute;
     left: 10%;
     top: 20%;
@@ -332,46 +338,55 @@ body {
     max-width: 80%;
     z-index: 1;
 }
-.slider .list .item .content p:nth-child(1){
+
+.slider .list .item .content p:nth-child(1) {
     text-transform: uppercase;
     letter-spacing: 10px;
 }
-.slider .list .item .content h2{
+
+.slider .list .item .content h2 {
     font-size: 100px;
     margin: 0;
 }
-.slider .list .item.active{
+
+.slider .list .item.active {
     opacity: 1;
     z-index: 10;
 }
+
 @keyframes showContent {
-    to{
+    to {
         transform: translateY(0);
         filter: blur(0);
         opacity: 1;
     }
 }
+
 .slider .list .item.active p:nth-child(1),
 .slider .list .item.active h2,
-.slider .list .item.active p:nth-child(3){
+.slider .list .item.active p:nth-child(3) {
     transform: translateY(30px);
     filter: blur(20px);
     opacity: 0;
     animation: showContent .5s .7s ease-in-out 1 forwards;
 }
-.slider .list .item.active h2{
+
+.slider .list .item.active h2 {
     animation-delay: 1s;
 }
-.slider .list .item.active p:nth-child(3){
+
+.slider .list .item.active p:nth-child(3) {
     animation-duration: 1.3s;
 }
-.arrows{
+
+.arrows {
     position: absolute;
     top: 30%;
     right: 50px;
     z-index: 100;
 }
-.arrows button{
+
+.arrows button {
     background-color: #eee5;
     border: none;
     font-family: monospace;
@@ -382,11 +397,13 @@ body {
     color: #eee;
     transition: .5s;
 }
-.arrows button:hover{
+
+.arrows button:hover {
     background-color: #eee;
     color: black;
 }
-.thumbnail{
+
+.thumbnail {
     position: absolute;
     bottom: 50px;
     z-index: 11;
@@ -399,26 +416,31 @@ body {
     overflow: auto;
     justify-content: center;
 }
-.thumbnail::-webkit-scrollbar{
+
+.thumbnail::-webkit-scrollbar {
     width: 0;
 }
-.thumbnail .item{
+
+.thumbnail .item {
     width: 150px;
     height: 220px;
     filter: brightness(.5);
     transition: .5s;
     flex-shrink: 0;
 }
-.thumbnail .item img{
+
+.thumbnail .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
-.thumbnail .item.active{
+
+.thumbnail .item.active {
     filter: brightness(1.5);
 }
-.thumbnail .item .content{
+
+.thumbnail .item .content {
     position: absolute;
     inset: auto 10px 10px 10px;
     color: black;
@@ -438,124 +460,124 @@ body {
     /* margin-top: 100px; */
     padding-top: 100px;
     padding-bottom: 100px;
-}
-#transform a{
-    text-decoration: none;
-    color: #000;    
-}
-.card1 {
-    height: 400px;
-    width: 100%;
-    border: 2px solid white;
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside the card */
-    margin: 15px; /* Add margin on all sides for space between cards */
-    width: calc(30% - 30px); /* Adjust width to accommodate margin (3 cards in a row) */
-    box-shadow: 0 10px 10px rgb(0, 0, 0); /* Shadow effect */
-    text-align: center; /* Center text */
+    }
+    #transform a{
+        text-decoration: none;
+        color: #000;    
+    }
+    .card1 {
+        height: 400px;
+        width: 100%;
+        border: 2px solid white;
+        border-radius: 8px; /* Rounded corners */
+        padding: 20px; /* Padding inside the card */
+        margin: 15px; /* Add margin on all sides for space between cards */
+        width: calc(30% - 30px); /* Adjust width to accommodate margin (3 cards in a row) */
+        box-shadow: 0 10px 10px rgb(0, 0, 0); /* Shadow effect */
+        text-align: center; /* Center text */
 
-}
+    }
 
-.card1:hover {
-    transform: translateX(100%); /* Move the card when hovered */
-}
+    .card1:hover {
+        transform: translateX(100%); /* Move the card when hovered */
+    }
 
-/* Target the <i> inside .card1 on hover */
-.card1:hover i {
-    transform: translateX(50%); /* Move the <i> inside the card */
-    transition: transform 0.3s ease; /* Smooth transition for the <i> */
-}
-.card1:hover {
-    transform: scale(1.02); /* Slightly scale the card on hover */
-    transition: transform 0.3s; /* Smooth transition */
-}
+    /* Target the <i> inside .card1 on hover */
+    .card1:hover i {
+        transform: translateX(50%); /* Move the <i> inside the card */
+        transition: transform 0.3s ease; /* Smooth transition for the <i> */
+    }
+    .card1:hover {
+        transform: scale(1.02); /* Slightly scale the card on hover */
+        transition: transform 0.3s; /* Smooth transition */
+    }
 
-#weightloss {
-    background-color: #f1fb87ad; /* Soft Gray */
-}
+    #weightloss {
+        background-color: #f1fb87ad; /* Soft Gray */
+    }
 
-#reversediabetes {
-    background-color: #a7c6edb7; /* Cool Blue */
-}
+    #reversediabetes {
+        background-color: #a7c6edb7; /* Cool Blue */
+    }
 
-#bmi {
-    background-color: #e2d7c0b2; /* Warm Beige */
-}
-#weightloss h2{
-    font-size: 40px;
+    #bmi {
+        background-color: #e2d7c0b2; /* Warm Beige */
+    }
+    #weightloss h2{
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        font-weight: 800;
+    }
+
+    #weightloss i{
+        font-size: 50px;
+        margin-right: 400px;
+        margin-top: -310px;
+        display: block;
+        color: #000;
+    }
+
+    #weightloss img {
+        width: 130%; /* Responsive image */
+    margin-left: 50px;
+        object-fit: contain;
+        padding-left: -50px;
+        border-radius: 10%;
+        margin-top: 10px;
+        
+    } 
+    #reversediabetes h2{
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        font-weight: 800;
+    }
+    #reversediabetes i{
+        font-size: 50px;
+        margin-left: 330px;
+        margin-top: -310px;
+        display: block;
+        color:#000;
+    }
+
+    #reversediabetes img {
+        width: 100%; /* Responsive image */
+        height: 350px ;/* Maintain aspect ratio */
+        object-fit: contain;
+        padding-left: -50px;
+        border-radius: 10%;
+        margin-top: 10px;
+    } 
+
+
+
+    #bmi h2{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    font-weight: 800;
-}
-
-#weightloss i{
-    font-size: 50px;
-    margin-right: 400px;
-    margin-top: -310px;
-    display: block;
-    color: #000;
-}
-
-#weightloss img {
-    width: 130%; /* Responsive image */
-   margin-left: 50px;
-    object-fit: contain;
-    padding-left: -50px;
-    border-radius: 10%;
-    margin-top: 10px;
-    
-} 
-#reversediabetes h2{
     font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
     font-weight: 800;
-}
-#reversediabetes i{
-    font-size: 50px;
-    margin-left: 330px;
-    margin-top: -310px;
-    display: block;
-    color:#000;
-}
-
-#reversediabetes img {
-    width: 100%; /* Responsive image */
-    height: 350px ;/* Maintain aspect ratio */
-    object-fit: contain;
-    padding-left: -50px;
-    border-radius: 10%;
-    margin-top: 10px;
-} 
-
-
-
-#bmi h2{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-top: 20px;
-   font-size: 40px;
-   font-weight: 800;
-}
-#bmi img {
-    width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 700px; /* Set a maximum height for the image */
-    object-fit: contain; /* Ensures the image scales properly */
-    margin-left: -100px;
-    margin-top: 47px;
-}
-#bmi i{
-    font-size: 50px;
-    margin-left: 330px;
-    margin-top: -260px;
-    display: block;
-    color:#000;
+    }
+    #bmi img {
+        width: 100%; /* Responsive image */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 700px; /* Set a maximum height for the image */
+        object-fit: contain; /* Ensures the image scales properly */
+        margin-left: -100px;
+        margin-top: 47px;
+    }
+    #bmi i{
+        font-size: 50px;
+        margin-left: 330px;
+        margin-top: -260px;
+        display: block;
+        color:#000;
 }
 
 #trainermeet{
@@ -836,75 +858,64 @@ body {
     margin-top: 150px;
     margin-bottom: -250px;
 }
-
-@media (max-width: 678px) {
-    #video {
-        position: relative; /* Create a positioning context for absolute children */
-        overflow: hidden; /* Ensure content doesn't overflow */
-        height: 100vh; /* Full height of the viewport */
-        width: 100%; /* Full width */
-    }
-
-    #video video {
-        height: 100%; /* Full height of the container */
-        width: 100%; /* Full width of the container */
-        z-index: -1; /* Ensure video is below other elements */
-        position: absolute; /* Use absolute positioning for the video */
-        top: 0; /* Align to the top */
-        left: 0; /* Align to the left */
-    }
-
-    #contentvideo {
-        position: absolute; /* Position content over the video */
-        top: 50%;
-        left: 50%; 
-        transform: translate(-50%, -50%); /* Centering */
-        color: white; /* Make text color visible against the video */
-        z-index: 5; /* Ensure it's above the video */
-        text-align: center; /* Center the text */
-    }
-
-    #contentvideo h4 {
-        font-size: 5em; /* Large font size for visibility */
-        color: beige;
-        margin: 0; /* Remove margin to avoid distortion */
-        display: flex; /* Allow h4 to contain inline-flex items */
-        align-items: center; /* Align text and exclamation mark vertically */
-        justify-content: center;
-        flex-direction: column; /* Stack elements vertically */
-    }
-
-    #contentvideo span {
-        margin-right: 0; /* Space between "Era" and the exclamation mark */
-    }
-
-    #contentvideo p {
-        font-size: 1.5em; /* Adjust font size for visibility */
-        color: beige;
-    }
-
-    #contentvideo span {
-        color: rgb(255, 0, 51); /* Color for specific text */
-    }
+   
+/* Media Queries for Small Screens */
+@media (max-width: 600px) { 
+    
+#nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px;
+    margin: 0;
+    background-color: transparent; /* Transparent background */
+    z-index: 10; /* Ensure navbar stays above other elements */
+    position: fixed; /* Fix it to the top of the page */
+    top: 0; /* Align it to the top of the page */
+    width: 100%; /* Make sure it spans the full width of the screen */
 }
 
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+#nav span {
+    color: crimson;
 }
+
+#nav a:nth-child(1) {
+    margin-right: auto;
+    font-size: 25px;
+    font-weight: 900;
+} 
+
+#nav a {
+    text-decoration: none;
+    color: beige;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#nav i {
+    color: crimson;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 20px;
+    margin-left: -20px;
+    margin-right: 10px;
+    font-weight: 900;
+}    
+
+
+#video {
+    position: relative; /* Create a positioning context for absolute children */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    height: 100vh; /* Full height of the viewport*/
+    
+}
+#video video {
+    height: 100%; /* Full height of the container */
+    width: 100%; /* Full width of the container */
+    object-fit: cover; /* Ensure video covers the area */
+    z-index: -1; /* Ensure video is below other elements */
+    position: absolute; /* Use absolute positioning for the video */
+}
+
+  }
+
