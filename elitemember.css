@@ -1,0 +1,109 @@
+* {
+    font-family: "Noto Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(41, 41, 41, 1)); /* Gradient from titanium black to silver */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+#nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px;
+    margin: 0;
+    background-color: transparent; /* Transparent background */
+    z-index: 10; /* Ensure navbar stays above other elements */
+    position: fixed; /* Fix it to the top of the page */
+    top: 0; /* Align it to the top of the page */
+    width: 100%; /* Make sure it spans the full width of the screen */
+}
+
+#nav span {
+    color: crimson;
+}
+
+#nav a:nth-child(1) {
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: 900;
+} 
+
+#nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#nav i {
+    color: crimson;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 25px;
+    margin-left: -20px;
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+
+
+.membership-container {
+    display: flex; /* Use flexbox for a horizontal layout */
+    justify-content: flex-start; /* Align items to the start */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    max-width: 100%; /* Full width of the viewport */
+    padding: 20px; /* Padding around the container */
+   
+}
+
+.membership-card {
+    background-color: white; /* Card background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px; /* Padding inside the card */
+    width: 300px; /* Fixed width of each card */
+    height: 400px; /* Fixed height for equal sizes */
+    margin-right: 20px; /* Space between cards */
+    display: flex;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Horizontal offset, Vertical offset, Blur radius, Color */
+    flex-direction: column; /* Column layout for content */
+    justify-content: space-between; /* Space between title, benefits, and button */
+}
+
+.card-title {
+    text-align: center; /* Center the title */
+    color: #333; /* Title color */
+}
+
+.benefits-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    flex-grow: 1; /* Allow benefits list to grow */
+}
+
+.benefits-list li {
+    margin: 10px 0; /* Space between benefits */
+}
+
+.join-button {
+    width: 100%; /* Full-width button */
+    background-color: #9176ff; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    font-size: 1.2em;
+}
+
+.join-button:hover {
+    background-color: #8757ff; /* Darker shade on hover */
+    color: #000;
+}

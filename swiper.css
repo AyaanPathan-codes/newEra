@@ -1,0 +1,96 @@
+.swiper {
+    width: 100%;
+    max-width: 100vw; /* Ensures it doesn’t extend beyond the viewport width */
+    overflow: hidden; /* Hides any horizontal overflow */
+}
+.swiper-wrapper {
+    width: 100%;
+    height: 35em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible; /* Allow some overflow to show neighboring slides */
+    margin-top: 300px;
+    padding: 0 3em; /* Adds space to show next slide on the right */
+}
+.swiper-slide {
+    width: 80%; /* Adjust the width of each slide */
+    max-width: 300px; /* Maximum width for the slides */
+    transition: transform 0.3s ease; /* Smooth transition for slides */
+}
+.card5 {
+    width: 18em;
+    height: 60%;
+    background-color: white;
+    border-radius: 2em;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+    padding: 2em 2em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: -7em -4em; /* Reduced margin to allow space for the next card */
+}
+.card-image {
+    width: 12em; /* Set equal width and height for a circle */
+    height: 12em;
+    border-radius: 50%; /* Ensures the container is circular */
+    border: 5px solid #9176ff;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Ensures the image itself is circular */
+    object-fit: cover; /* Scales the image to fit within the circle */
+    object-position: 20% 20%;
+}
+
+
+.card-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.card-title{
+    font-size: 1.5em;
+    font-weight: 500;
+    position: relative;
+    top:.2em;
+
+}
+.card-name{
+    color:#9176ff;
+}
+.card-text{
+    text-align: center;
+    font-size: 1.1em;
+    margin: 0em 0;
+
+}
+.card_btn{
+     background-color: #9176ff;
+    color:white;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    padding: .5em;
+    border-radius: .5em;
+    margin-top: .5em;
+    cursor: pointer;
+}
+.card_btn:hover{
+    background-color:crimson;
+    color: black;
+}
+
+/* Optional: Remove horizontal scroll on the entire page */
+body {
+    overflow-x: hidden;
+}
+     

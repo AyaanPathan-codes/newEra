@@ -1,0 +1,243 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet"/>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <title>Techniques to Reverse Diabetes</title>
+        <style>
+        html, body {
+        height: 100%; /* Ensure full height */
+        margin: 0; /* Remove default margin */
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    body {
+        background: linear-gradient(to bottom, rgb(123, 189, 247), rgb(0, 0, 0)); /* Gradient from titanium black to silver */
+        font-family: 'Arial', sans-serif;
+    }
+    #nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px;
+    margin: 0;
+    background-color: transparent; /* Transparent background */
+    z-index: 10; /* Ensure navbar stays above other elements */
+    position: fixed; /* Fix it to the top of the page */
+    top: 0; /* Align it to the top of the page */
+    width: 100%; /* Make sure it spans the full width of the screen */
+}
+
+#nav span {
+    color: crimson;
+}
+
+#nav a:nth-child(1) {
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: 900;
+} 
+
+#nav a {
+    text-decoration: none;
+    color: beige;
+    padding: 10px 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#nav i {
+    color: crimson;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 25px;
+    margin-left: -20px;
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+    h1, h2 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 150px;
+    }
+
+    h2 {
+        color: beige;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        flex-grow: 1; /* Allow cards to grow equally */
+        height: 100%; /* Ensure cards take full height of the parent */
+        margin: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .video-container {
+        margin: 40px 0;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+        margin-top: 100px;
+    }
+
+    .doctor-card {
+        width: 250px; /* Fixed width for doctor cards */
+        margin: 20px auto; /* Center and add margin */
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+
+
+    .join-button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.3s;
+        cursor: pointer;
+        margin-top: 60px;
+        display: block;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .join-button:hover {
+        background-color: #45a049;
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+        .video-container {
+            flex-direction: column;
+        }
+        .card{
+            margin-top: 100px;
+            
+            }
+        .doctor-card card {
+            width: 90%; 
+            /* Responsive width for doctor cards on smaller screens */
+        gap: 200px;
+        padding-top: 200px;
+        }   
+    }
+
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <a href="#">New<span> - Era</span></a>
+            <a href="index.html">Home</a>
+            <a href="index.html#membership">Memberships</a>
+            <a href="index.html#activities">Activities</a>
+            <i class="ri-login-circle-line"></i>
+       
+        </div>
+    <div class="container mt-5">
+        <h1>Techniques to Reverse Diabetes</h1>
+        <div class="row">
+            <!-- Technique Cards -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/diet.jfif" class="card-img-top" alt="Technique 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Diet Modification</h5>
+                        <p class="card-text">Implementing a low-carb, high-fiber diet can significantly improve blood sugar levels.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/strength.avif" class="card-img-top" alt="Technique 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Regular Exercise</h5>
+                        <p class="card-text">Engaging in at least 150 minutes of moderate aerobic activity each week can help reverse diabetes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/stress.jpg" class="card-img-top" alt="Technique 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Stress Management</h5>
+                        <p class="card-text">Practicing stress-reduction techniques like yoga and meditation can help lower blood sugar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Join Button -->
+        <button class="join-button">Join Our Community</button>
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/da1vvigy5tQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+
+        <h2>Doctors Specialized in Diabetes</h2>
+        <div class="row">
+            <!-- Doctor Cards -->
+            <div class="col-md-4">
+                <div class="doctor-card card">
+                    <img src="images/dr3.jpg" class="card-img-top" alt="Doctor 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. John Smith</h5>
+                        <p class="card-text">Endocrinologist with over 10 years of experience in diabetes care.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="doctor-card card">
+                    <img src="images/dr1.jpg" class="card-img-top" alt="Doctor 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Jane Doe</h5>
+                        <p class="card-text">Diabetes specialist focused on patient-centered care and education.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="doctor-card card">
+                    <img src="images/dr2.jpg" class="card-img-top" alt="Doctor 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Emily White</h5>
+                        <p class="card-text">Expert in nutritional therapy and lifestyle changes for diabetes management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    </html>

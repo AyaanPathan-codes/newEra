@@ -1,0 +1,910 @@
+* {
+    font-family: "Noto Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.overlay-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* Adjust height as needed */
+    background: linear-gradient(to top, rgba(41, 41, 41, 1), rgba(192, 192, 192, 0));
+    pointer-events: none; /* Makes sure the overlay doesn't block interactions */
+}
+#nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px;
+    margin: 0;
+    background-color: transparent; /* Transparent background */
+    z-index: 10; /* Ensure navbar stays above other elements */
+    position: fixed; /* Fix it to the top of the page */
+    top: 0; /* Align it to the top of the page */
+    width: 100%; /* Make sure it spans the full width of the screen */
+}
+
+#nav span {
+    color: crimson;
+}
+
+#nav a:nth-child(1) {
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: 900;
+} 
+
+#nav a {
+    text-decoration: none;
+    color: beige;
+    padding: 10px 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#nav i {
+    color: crimson;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 25px;
+    margin-left: -20px;
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+
+#video {
+    position: relative; /* Create a positioning context for absolute children */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    height: 100vh; /* Full height of the viewport */
+    background: linear-gradient(to bottom, rgba(white), transparent);
+}
+
+#video video {
+    height: 100%; /* Full height of the container */
+    width: 100%; /* Full width of the container */
+    object-fit: cover; /* Ensure video covers the area */
+    z-index: -1; /* Ensure video is below other elements */
+    position: absolute; /* Use absolute positioning for the video */
+}
+#contentvideo {
+    position: absolute; /* Position content over the video */
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centering */
+    color: white; /* Make text color visible against the video */
+    z-index: 5; /* Ensure it's above the video */
+    text-align: center; /* Center the text */
+}
+
+#contentvideo h4 {
+    font-size: 5.7em; /* Large font size for visibility */
+    color: beige;
+    margin: 0; /* Remove margin to avoid distortion */
+    display: inline-flex; /* Allow h4 to contain inline-flex items */
+    align-items: center; /* Align text and exclamation mark vertically */
+}
+
+#contentvideo span {
+    margin-right: 10px; /* Space between "Era" and the exclamation mark */
+}
+
+#contentvideo p {
+    font-size: 1.5em; /* Adjust font size for visibility */
+    color: beige;
+}
+
+#contentvideo span {
+    color: rgb(255, 0, 51);
+}
+
+#explore {
+    position: absolute; /* Position content over the video */
+    top: 86%; /* Adjust this value based on the layout */
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centering */
+    color: crimson; /* Make text color visible against the video */
+    z-index: 5; /* Ensure it's above the video */
+    text-align: center; /* Center the text */
+  
+}
+#explore button {
+   /* Optional: Set a transparent background */
+    border: none; /* Optional: Remove border */
+    color: #000; /* Default text color */
+    font-size:20px; 
+    padding: 10px 20px; /* Add padding for better appearance */
+    border-radius: 15px; /* Adjust this value for more or less rounding */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Optional: Add smooth transition */
+}
+
+#explore button:hover {
+    color: crimson; /* Change text color to crimson on hover */
+   ; /* Optional: Add a hover background color */
+}
+#explore i {
+    font-size: 50px; /* Size of the icon */
+    margin-top: 30px; /* Space above the icon */
+    display: block; /* Make it a block-level element to occupy full width */
+    color: crimson; /* Optional: Set the icon color */
+    transition: transform 0.3s ease;
+   
+}
+#explore i:hover{
+    transform:scale(1.5);
+    color: #bebebe;
+}
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(41, 41, 41, 1), rgba(41, 41, 41, 1)); /* Gradient from titanium black to silver */
+}
+#cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    margin: 20px 0; /* Adjust margin to remove extra space */
+    padding: 0; /* Remove padding from the cards container */
+    width: 100%;
+    position: relative;
+}
+
+.card {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 30px;
+    height: 300px; /* Fixed height for consistency */
+    background-color: rgba(0, 0, 0, 0.132);
+    border: 1px solid crimson;
+    border-radius: 10px;
+    width: 30%; /* Adjust width as needed */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; /* For overlay positioning */
+    overflow: hidden; /* Hide overflow for the overlay */
+}
+
+
+
+.card h4, .card p {
+    z-index: 1; /* Keeps text above the overlay */
+}
+
+.card:hover .overlay-bottom {
+    height: 60%; /* Expands the overlay on hover for a dynamic effect */
+    transition: height 0.3s ease; /* Smooth transition */
+}
+
+
+#membership h2 {
+    color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:110px;
+    font-size: 70px;
+}
+#cards {
+    display: flex; 
+    justify-content: center; /* Centers the cards */
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin-top: 120px;
+    gap: 40px; /* Adds space between cards */
+}
+
+.card {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 30px; /* Increased padding for better spacing inside the card */
+    height: 22vh;
+    background-color: rgba(0, 0, 0, 0.132);
+    border: 1px solid crimson;
+    border-radius: 10px;
+    width: 80%; /* Increased width for a wider card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h4 {
+    font-weight: 1000;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+#cards a {
+    text-decoration: none;  
+}
+
+.card span1 {
+    color: rgb(205, 174, 0);
+    font-size: 35px;
+    text-shadow: #000;
+}
+
+.card span2 {
+    color: rgb(123, 150, 138);
+    font-size: 35px;
+    text-shadow: #000;
+}
+
+.card span3 {
+    color: rgb(87, 191, 220);
+    font-size: 35px;
+    text-shadow: #000;
+}
+
+#activities h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin-top: 200px;
+    /* font-weight: 600; */
+    color: beige;
+}
+
+#activities i {
+    font-size: 50px; /* Size of the icon */
+    margin-top: 20px; /* Space above the icon */
+    display: block; /* Make it a block-level element to occupy full width */
+    color: crimson; /* Optional: Set the icon color */
+    transition: transform 0.3s ease;
+    margin-left:720px;
+   
+}
+#activities i:hover{
+   
+    color: beige;
+}
+#activities hr{
+    height: 10px;
+    width: 20%;
+    background-color: antiquewhite;
+    margin-left: 610px;
+    margin-top:10px ;
+    margin-bottom: 100px;
+}
+/* css slider */
+.slider {
+    height: 100vh;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .list .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+    color: beige;
+}
+.slider .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .list .item::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        to top, #000 3%, transparent
+    );
+}
+.slider .list .item .content{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+}
+.slider .list .item .content p:nth-child(1){
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.slider .list .item .content h2{
+    font-size: 100px;
+    margin: 0;
+}
+.slider .list .item.active{
+    opacity: 1;
+    z-index: 10;
+}
+@keyframes showContent {
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3){
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+.slider .list .item.active h2{
+    animation-delay: 1s;
+}
+.slider .list .item.active p:nth-child(3){
+    animation-duration: 1.3s;
+}
+.arrows{
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 100;
+}
+.arrows button{
+    background-color: #eee5;
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #eee;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #eee;
+    color: black;
+}
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+}
+.thumbnail::-webkit-scrollbar{
+    width: 0;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    filter: brightness(.5);
+    transition: .5s;
+    flex-shrink: 0;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.thumbnail .item.active{
+    filter: brightness(1.5);
+}
+.thumbnail .item .content{
+    position: absolute;
+    inset: auto 10px 10px 10px;
+    color: black;
+    font-weight: 600;
+}
+
+#transform {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.41);
+    flex-direction: row; /* Stack cards in a row */
+    align-items: center; /* Center align cards horizontally */
+    justify-content: flex-start; /* Align items to the start */
+    height: 100%; /* Take full height */
+    /* background: linear-gradient(to bottom, rgba(41, 41, 41, 1), rgba(192, 192, 192, 1)); Gradient from titanium black to silver White to purple gradient */
+    padding: 20px; /* Padding around the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for the container */
+    /* margin-top: 100px; */
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#transform a{
+    text-decoration: none;
+    color: #000;    
+}
+.card1 {
+    height: 400px;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    margin: 15px; /* Add margin on all sides for space between cards */
+    width: calc(30% - 30px); /* Adjust width to accommodate margin (3 cards in a row) */
+    box-shadow: 0 10px 10px rgb(0, 0, 0); /* Shadow effect */
+    text-align: center; /* Center text */
+
+}
+
+.card1:hover {
+    transform: translateX(100%); /* Move the card when hovered */
+}
+
+/* Target the <i> inside .card1 on hover */
+.card1:hover i {
+    transform: translateX(50%); /* Move the <i> inside the card */
+    transition: transform 0.3s ease; /* Smooth transition for the <i> */
+}
+.card1:hover {
+    transform: scale(1.02); /* Slightly scale the card on hover */
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+#weightloss {
+    background-color: #f1fb87ad; /* Soft Gray */
+}
+
+#reversediabetes {
+    background-color: #a7c6edb7; /* Cool Blue */
+}
+
+#bmi {
+    background-color: #e2d7c0b2; /* Warm Beige */
+}
+#weightloss h2{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-weight: 800;
+}
+
+#weightloss i{
+    font-size: 50px;
+    margin-right: 400px;
+    margin-top: -310px;
+    display: block;
+    color: #000;
+}
+
+#weightloss img {
+    width: 130%; /* Responsive image */
+   margin-left: 50px;
+    object-fit: contain;
+    padding-left: -50px;
+    border-radius: 10%;
+    margin-top: 10px;
+    
+} 
+#reversediabetes h2{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-weight: 800;
+}
+#reversediabetes i{
+    font-size: 50px;
+    margin-left: 330px;
+    margin-top: -310px;
+    display: block;
+    color:#000;
+}
+
+#reversediabetes img {
+    width: 100%; /* Responsive image */
+    height: 350px ;/* Maintain aspect ratio */
+    object-fit: contain;
+    padding-left: -50px;
+    border-radius: 10%;
+    margin-top: 10px;
+} 
+
+
+
+#bmi h2{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+   font-size: 40px;
+   font-weight: 800;
+}
+#bmi img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 700px; /* Set a maximum height for the image */
+    object-fit: contain; /* Ensures the image scales properly */
+    margin-left: -100px;
+    margin-top: 47px;
+}
+#bmi i{
+    font-size: 50px;
+    margin-left: 330px;
+    margin-top: -260px;
+    display: block;
+    color:#000;
+}
+
+#trainermeet{
+    background-color: #000;
+    height: 100px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+#trainermeet h2{
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:beige;
+}
+#cards1{
+    padding: 40px 10px ;
+    display: flex;
+    justify-content: space-around;
+}   
+
+
+/* cards adjustment */
+#card11{
+    height: 300px;
+    width: 300px;
+    border: 2px solid red;
+    background-color: #bebebe;
+    border-radius: 10px;
+    padding-left: 60px;
+    padding-top: 15px;
+}
+#card11 h5{
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 7px;
+    margin-left: 50px;
+}
+#card11 h6{
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 30px;
+}
+#card22{
+    height: 300px;
+    width: 300px;
+    border: 2px solid red;
+    background-color: #bebebe;
+    border-radius: 10px;
+    padding-left: 60px;
+    padding-top: 15px;
+}
+#card22{
+    height: 300px;
+    width: 300px;
+    border: 2px solid red;
+    background-color: #bebebe;border-radius: 10px;
+
+}
+
+#card22 h5{
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    margin-bottom: 7px;
+    margin-left: 40px;
+}
+#card22 h6{
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 30px;
+}
+#card33{
+    height: 300px;
+    width: 300px;
+    border: 2px solid red;
+    background-color: #bebebe;
+    border-radius: 10px;
+    padding-left: 60px;
+    padding-top: 15px;
+}
+
+#card33 h5{
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    margin-bottom: 7px;
+    margin-left: 50px;
+}
+#card33 h6{
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+/*images adjustment*/
+#card11 img {
+    width: 150px; /* Set a specific width */
+    height: 150px; /* Set the same height to make it a square */
+    border-radius: 50%; /* Make it a perfect circle */
+    object-fit: cover; /* Ensure the image covers the area */
+    border: 2px solid black;
+    margin-left: 40px;
+    object-position: 80% 20%;
+}
+
+
+#card22 img {
+    width: 150px; /* Set a specific width */
+    height: 150px; /* Set the same height to make it a square */
+    border-radius: 50%; /* Make it a perfect circle */
+    object-fit: cover; /* Ensure the image covers the area */
+    border: 2px solid black;
+    margin-left: 40px;
+}
+
+
+#card33 img {
+    width: 150px; /* Set a specific width */
+    height: 150px; /* Set the same height to make it a square */
+    border-radius: 50%; /* Make it a perfect circle */
+    object-fit: cover; /* Ensure the image covers the area */
+    border: 2px solid black;
+    margin-left: 40px;
+    object-position: 80% 20%;
+}
+
+#card11, #card22, #card33 {
+    position: relative; /* Required for the absolute positioning of the pseudo-element */
+    overflow: hidden; /* Ensures the gradient stays within the card */
+}
+
+#card11:hover:before, #card22:hover:before, #card33:hover:before {
+    content: ''; /* Required for the pseudo-element to work */
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    top: 0; /* Cover the entire card */
+    background: linear-gradient(to top, rgba(255, 0, 0, 0.7), rgba(255, 0, 0, 0.0)); /* Red gradient from bottom to top */
+    z-index: 1; /* Ensure it is above the card background but below text */
+}
+
+#card11:hover, #card22:hover, #card33:hover {
+    color: white; /* Change text color on hover */
+}
+
+.contact-label {
+    position: absolute;
+    bottom: 120px; /* Positioning from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: rgb(0, 0, 0); /* Semi-transparent background for visibility */
+    color: white; /* Text color */
+    padding: 5px 10px; /* Padding for aesthetics */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 2; /* Ensure it appears above the gradient */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition for visibility */
+}
+
+#card11:hover .contact-label, #card22:hover .contact-label, #card33:hover .contact-label {
+    opacity: 1; /* Show the label on hover */
+}
+
+/* Container for cards */
+#cards-container {
+    display: flex; /* Use Flexbox to align cards in a row */
+    justify-content: space-around; /* Distribute cards evenly with space around */
+    flex-wrap: wrap; /* Ensure the cards wrap if the screen is too small */
+    gap: 20px; /* Adds space between the cards */
+    padding: 20px; /* Optional: Add some padding around the container */
+}
+#card44, #card55, #card66 {
+    position: relative; /* Required for the absolute positioning of the pseudo-element */
+    overflow: hidden; /* Ensures the gradient stays within the card */
+}
+
+#card44:hover:before, #card55:hover:before, #card66:hover:before {
+    content: ''; /* Required for the pseudo-element to work */
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    top: 0; /* Cover the entire card */
+    background: linear-gradient(to top, rgba(255, 0, 0, 0.7), rgba(255, 0, 0, 0.0)); /* Red gradient from bottom to top */
+    z-index: 1; /* Ensure it is above the card background but below text */
+}
+
+#card44:hover, #card55:hover, #card66:hover {
+    color: white; /* Change text color on hover */
+}
+
+.contact-label {
+    position: absolute;
+    bottom: 120px; /* Positioning from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: rgb(0, 0, 0); /* Semi-transparent background for visibility */
+    color: white; /* Text color */
+    padding: 5px 10px; /* Padding for aesthetics */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 2; /* Ensure it appears above the gradient */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition for visibility */
+}
+
+#card44:hover .contact-label, #card55:hover .contact-label, #card66:hover .contact-label {
+    opacity: 1; /* Show the label on hover */
+}
+
+/* Card styles */
+#card44, #card55, #card66 {
+    height: 300px;
+    width: 300px;
+    border: 2px solid red;
+    background-color: #bebebe;
+    border-radius: 10px;
+    padding-left: 60px;
+    padding-top: 15px;
+}
+#card44 img , #card55 img , #card66 img{
+    object-fit: contain;
+    margin-left: 40px;
+    
+}
+/* Headings and image adjustments (remain unchanged) */
+#card44 h5, #card55 h5, #card66 h5 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    margin-bottom: 7px;
+    margin-left: 20px;
+}
+
+#card44 h6, #card55 h6, #card66 h6 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+#card44 img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid black;
+    object-position: 100% 20%;
+}
+#card55 img, #card66 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid black;
+    object-position: 80% 20%;
+}
+#card66 img {
+    object-position: 10% 20%;
+}
+
+#review h2{
+    font-size: 60px;
+    font-weight: 600;
+    background-color: beige;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: -250px;
+}
+
+@media (max-width: 678px) {
+    #video {
+        position: relative; /* Create a positioning context for absolute children */
+        overflow: hidden; /* Ensure content doesn't overflow */
+        height: 100vh; /* Full height of the viewport */
+        width: 100%; /* Full width */
+    }
+
+    #video video {
+        height: 100%; /* Full height of the container */
+        width: 100%; /* Full width of the container */
+        z-index: -1; /* Ensure video is below other elements */
+        position: absolute; /* Use absolute positioning for the video */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+    }
+
+    #contentvideo {
+        position: absolute; /* Position content over the video */
+        top: 50%;
+        left: 50%; 
+        transform: translate(-50%, -50%); /* Centering */
+        color: white; /* Make text color visible against the video */
+        z-index: 5; /* Ensure it's above the video */
+        text-align: center; /* Center the text */
+    }
+
+    #contentvideo h4 {
+        font-size: 5em; /* Large font size for visibility */
+        color: beige;
+        margin: 0; /* Remove margin to avoid distortion */
+        display: flex; /* Allow h4 to contain inline-flex items */
+        align-items: center; /* Align text and exclamation mark vertically */
+        justify-content: center;
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    #contentvideo span {
+        margin-right: 0; /* Space between "Era" and the exclamation mark */
+    }
+
+    #contentvideo p {
+        font-size: 1.5em; /* Adjust font size for visibility */
+        color: beige;
+    }
+
+    #contentvideo span {
+        color: rgb(255, 0, 51); /* Color for specific text */
+    }
+}
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+}

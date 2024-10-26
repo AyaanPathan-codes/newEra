@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Techniques to Reverse Diabetes</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1, h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            border-radius: 15px 15px 0 0;
+        }
+
+        .video-container {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .doctor-card {
+            width: 250px; /* Fixed width for doctor cards */
+            margin: auto;
+        }
+
+        .benefits-list {
+            padding: 0;
+            list-style: none;
+            color: #555;
+        }
+
+        .benefits-list li {
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .benefits-list li::before {
+            content: "✔"; /* Checkmark before each item */
+            color: #4caf50;
+            margin-right: 10px;
+        }
+
+        .join-button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .join-button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .video-container {
+                flex-direction: column;
+            }
+
+            .doctor-card {
+                width: 90%; /* Responsive width for doctor cards on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Techniques to Reverse Diabetes</h1>
+    <div class="row">
+        <!-- Technique Cards -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Technique 1">
+                <div class="card-body">
+                    <h5 class="card-title">Diet Modification</h5>
+                    <p class="card-text">Implementing a low-carb, high-fiber diet can significantly improve blood sugar levels.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Technique 2">
+                <div class="card-body">
+                    <h5 class="card-title">Regular Exercise</h5>
+                    <p class="card-text">Engaging in at least 150 minutes of moderate aerobic activity each week can help reverse diabetes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Technique 3">
+                <div class="card-body">
+                    <h5 class="card-title">Stress Management</h5>
+                    <p class="card-text">Practicing stress-reduction techniques like yoga and meditation can help lower blood sugar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <h2>Doctors Specializing in Diabetes</h2>
+    <div class="row">
+        <!-- Doctor Cards -->
+        <div class="col-md-4">
+            <div class="doctor-card card">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Doctor 1">
+                <div class="card-body">
+                    <h5 class="card-title">Dr. John Smith</h5>
+                    <p class="card-text">Endocrinologist with over 10 years of experience in diabetes care.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="doctor-card card">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Doctor 2">
+                <div class="card-body">
+                    <h5 class="card-title">Dr. Jane Doe</h5>
+                    <p class="card-text">Diabetes specialist focused on patient-centered care and education.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="doctor-card card">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Doctor 3">
+                <div class="card-body">
+                    <h5 class="card-title">Dr. Emily White</h5>
+                    <p class="card-text">Expert in nutritional therapy and lifestyle changes for diabetes management.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

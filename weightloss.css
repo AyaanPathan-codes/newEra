@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100vh; /* Ensure the body takes full viewport height */
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(41, 41, 41, 1), rgba(41, 41, 41, 1)); /* Gradient from titanium black to silver */
+}
+
+
+
+#nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px;
+    margin: 0;
+    background-color: transparent; /* Transparent background */
+    z-index: 10; /* Ensure navbar stays above other elements */
+    position: fixed; /* Fix it to the top of the page */
+    top: 0; /* Align it to the top of the page */
+    width: 100%; /* Make sure it spans the full width of the screen */
+}
+
+#nav span {
+    color: crimson;
+}
+
+#nav a:nth-child(1) {
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: 900;
+} 
+
+#nav a {
+    text-decoration: none;
+    color: wheat;
+    padding: 10px 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#nav i {
+    color: crimson;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 25px;
+    margin-left: -20px;
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+
+#video {
+    position: relative; /* Create a positioning context for absolute children */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    height: 100vh; /* Full height of the viewport */
+    background: linear-gradient(to bottom, rgba(white), transparent);
+}
+
+#video video {
+    height: 100%; /* Full height of the container */
+    width: 100%; /* Full width of the container */
+    object-fit: cover; /* Ensure video covers the area */
+    z-index: -1; /* Ensure video is below other elements */
+    position: absolute; /* Use absolute positioning for the video */
+}
+
+
+#explore {
+    position: absolute; /* Position content over the video */
+    top: 86%; /* Adjust this value based on the layout */
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centering */
+    color: crimson; /* Make text color visible against the video */
+    z-index: 5; /* Ensure it's above the video */
+    text-align: center; /* Center the text */
+  
+}
+#explore button {
+   /* Optional: Set a transparent background */
+    border: none; /* Optional: Remove border */
+    color: #000; /* Default text color */
+    font-size:20px; 
+    padding: 10px 20px; /* Add padding for better appearance */
+    border-radius: 15px; /* Adjust this value for more or less rounding */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Optional: Add smooth transition */
+}
+
+#explore button:hover {
+    color: crimson; /* Change text color to crimson on hover */
+   ; /* Optional: Add a hover background color */
+}
+#explore i {
+    font-size: 50px; /* Size of the icon */
+    margin-top: 30px; /* Space above the icon */
+    display: block; /* Make it a block-level element to occupy full width */
+    color: crimson; /* Optional: Set the icon color */
+    transition: transform 0.3s ease;
+   
+}
+#explore i:hover{
+    transform:scale(1.5);
+    color: #bebebe;
+}
+
+.overlay-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* Adjust height as needed */
+    background: linear-gradient(to top, rgba(41, 41, 41, 1), rgba(192, 192, 192, 0));
+    pointer-events: none; /* Makes sure the overlay doesn't block interactions */
+}
+
+
+#loseweight h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 800;
+    color: wheat;
+    margin-top: 100px;
+}
+
+#loseweight p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 800;
+    color: wheat;
+    margin-top:20px;
+}
+#benefits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 40px;
+    color: crimson;
+    }
+#cards {
+    display: flex;
+    justify-content:row;
+    margin: 20px 0px; /* Adjust margin to remove extra space */
+    padding: 10px 10px; /* Remove padding from the cards container */
+    width: 100%;
+    position: relative;
+    
+}
+
+.card {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px; 
+    margin-left: 70px;
+    height: 400px; /* Fixed height for consistency */
+    background-color: rgba(0, 0, 0, 0.132);
+  
+    box-shadow: to bottom 0 10px 10px rgb(255, 0, 0); /* Shadow effect */
+    border-radius: 10px;
+    width: 18%; /* Adjust width as needed */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; /* For overlay positioning */
+    overflow: hidden; /* Hide overflow for the overlay */
+}
+.card:hover .overlay-bottom {
+    height: 60%; /* Expands the overlay on hover for a dynamic effect */
+    transition: height 0.3s ease; /* Smooth transition */
+}
+#card2 img{
+   
+    object-fit: cover;
+    height: 400px;
+    width: fit-content;
+
+}
+#card3 img{
+   
+    object-fit: cover;
+    height: 400px;
+    width: fit-content;
+    
+}
+
+.card-content {
+    position: absolute; /* Position content over the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering adjustment */
+    color: wheat; /* Text color */
+    text-align: center; /* Center text */
+    padding: 0px; /* Add padding around text */
+}
+
+.card-content h4 {
+    font-size: 40px;
+    margin-top: 25px; /* Adjust this value to control space above the paragraph */
+    position: relative; /* Position relative for slight adjustment */
+    top: 150px; /* Move slightly down from the center */
+    color: wheat;
+}
+
+.card-content p {
+    line-height: 1; /* Optional: Control line spacing */
+    margin-top:150px; /* Adjust this value to control space above the paragraph */
+    font-size:18px;
+    font-weight: 500;
+    color: white;
+}
+
+#personaltraining h2{
+   font-size: 40px;
+   color: antiquewhite;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 100px;
+   margin-bottom: 100px;
+}
+#personaltraining hr{
+    height: 10px;
+    width: 20%;
+    background-color: antiquewhite;
+    margin-left: 610px;
+    margin-top:-90px ;
+    margin-bottom: 100px;
+}#cards-container {
+    display: flex; /* Use Flexbox to align cards in a row */
+    justify-content: space-around; /* Distribute cards evenly with space around */
+    flex-wrap: wrap; /* Allow the cards to wrap if the screen is too small */
+    gap: 20px; /* Adds space between the cards */
+    padding: 20px; /* Optional: Add some padding around the container */
+}
+
+/* Card styles */
+#card11, #card22, #card33 {
+    height: 300px;
+    width: 300px;
+    border: 2px solid red;
+    background-color: #bebebe;
+    border-radius: 10px;
+    padding-left: 60px;
+    padding-top: 15px;
+}
+
+/* Headings and image adjustments */
+#card11 h5, #card22 h5, #card33 h5 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+#card11 h6, #card22 h6, #card33 h6 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#card11 img, #card22 img, #card33 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid black;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+    <div id="nav">
+        <a href="#">New<span> - Era</span></a>
+        <a href="index.html">Home</a>
+        <a href="index.html#membership">Memberships</a>
+        <a href="index.html#activities">Activities</a>
+        <i class="ri-login-circle-line"></i>
+    </div>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div id="ucframe">
+            <form id="calform" onsubmit="return false;">
+                <label for="weight-kg">Weight (kg):</label>
+                <input type="number" id="weight-kg" required>
+
+                <label for="height-feet">Height:</label>
+                <input type="number" id="height-feet" placeholder="Feet" required>
+                <input type="number" id="height-inches" placeholder="Inches" required>
+
+                <button id="button1" type="button" onclick="calculateBMI()">Calculate BMI</button>
+            </form>
+            <div class="results" id="result">
+                <p id="bmi-result"></p>
+                <p id="body-fat-result"></p>
+                <p>Check Diet Plan Below</p>
+            </div>
+        </div>
+    </div>
+    <div id="bmi-speedometer">
+        <svg width="300" height="160" viewBox="0 0 300 160">
+            <!-- Background arcs with labeled ranges -->
+            <path d="M30 130 A100 100 0 0 1 270 130" stroke="#FF0000" stroke-width="15" fill="none"></path>
+            <path d="M70 130 A60 60 0 0 1 230 130" stroke="#FFFF00" stroke-width="15" fill="none"></path>
+            <path d="M100 130 A30 30 0 0 1 200 130" stroke="#00FF00" stroke-width="15" fill="none"></path>
+    
+            <!-- Group for the needle, including the arrowhead -->
+            <g id="needle-group" transform="rotate(0, 150, 130)">
+                <!-- Needle line -->
+                <line x1="150" y1="130" x2="150" y2="50" stroke="black" stroke-width="3" />
+                <!-- Arrowhead at the top of the needle -->
+                <polygon points="145,50 155,50 150,30" fill="black" />
+            </g>
+    
+            <!-- Center circle for needle -->
+            <circle cx="150" cy="130" r="4" fill="black" />
+        </svg>
+        <p id="bmi-category"></p>
+    </div>
+    
+    
+    <div id="dietplan">
+        <h2>Diet Plan</h2>
+    </div>
+
+    <div id="cards">
+        <div class="card">
+            <h2>Bulking Diet</h2>
+            <p><strong>Vegetarian Options:</strong></p>
+            <ul>
+                <li>Quinoa and Black Bean Bowl</li>
+                <li>Chickpea Salad Sandwich</li>
+                <li>Paneer Tikka with Whole Wheat Roti</li>
+            </ul>
+            <p><strong>Non-Vegetarian Options:</strong></p>
+            <ul>
+                <li>Grilled Chicken Breast with Brown Rice</li>
+                <li>Salmon with Sweet Potatoes</li>
+                <li>Egg Omelette with Spinach</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Weight Loss Diet</h2>
+            <p><strong>Vegetarian Options:</strong></p>
+            <ul>
+                <li>Vegetable Stir-Fry with Tofu</li>
+                <li>Salad with Mixed Greens and Avocado</li>
+                <li>Lentil Soup with Spinach</li>
+            </ul>
+            <p><strong>Non-Vegetarian Options:</strong></p>
+            <ul>
+                <li>Grilled Fish with Steamed Vegetables</li>
+                <li>Chicken Salad with Balsamic Dressing</li>
+                <li>Turkey Wrap with Lettuce</li>
+            </ul>
+        </div>
+     </div>
+    <script src="bmi.js"></script>
+</body>
+</html>
