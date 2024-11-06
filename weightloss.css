@@ -278,3 +278,6 @@ body {
     object-fit: cover;
     border: 2px solid black;
 }
+#card33 img{
+    object-position: -90px 0px;
+}

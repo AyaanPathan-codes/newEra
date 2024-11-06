@@ -40,9 +40,9 @@
        
        
         <div id="explore">
-            
-            <button onclick="">Explore More </button>
-            <i class="ri-arrow-down-wide-line" onclick=""></i>
+            <a href=""></a>
+            <button onclick="scrollToSection()">Explore More </button>
+            <i class="ri-arrow-down-wide-line" onclick="scrollToSection()"></i>
         </div>
          
         <div id="membership">
@@ -179,19 +179,19 @@
                 <h2>Era.Transform</h2>
                 <p>Get coached to lose weight for good</p>
                 <img src="images/weights-removebg-preview.png" alt="">
-                <i class="ri-arrow-right-circle-fill"></i>
+               
             </a>
             <a href="reversediabetes.html" class="card1" id="reversediabetes">
                 <h2>Reverse Diabetes</h2>
                 <p>Reverse Type 2 and Prediabetes</p> 
                 <img src="images/diabetes-removebg-preview.png" alt="">
-                <i class="ri-arrow-right-circle-fill"></i>
+                
             </a>
             <a href="calculate_bmi.html" class="card1" id="bmi">
                 <h2>Calculate BMI</h2>
                 <p>Calculate your BMI</p>
-                <img src="images/measure-removebg-preview (1).png" alt="">
-                <i class="ri-arrow-right-circle-fill"></i>
+                <img src="images/brlly-removebg-preview.png"">
+               
             </a>
         </div>
         
@@ -377,7 +377,12 @@
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-var swiper = new Swiper(".mySwiper", {
+
+    function scrollToSection() {
+        document.getElementById('activities').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    var swiper = new Swiper(".mySwiper", {
     loop: true,
     autoplay: {
         delay: 2000, // Set delay between transitions

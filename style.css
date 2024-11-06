@@ -512,14 +512,6 @@ body {
         font-weight: 800;
     }
 
-    #weightloss i{
-        font-size: 50px;
-        margin-right: 400px;
-        margin-top: -310px;
-        display: block;
-        color: #000;
-    }
-
     #weightloss img {
         width: 130%; /* Responsive image */
     margin-left: 50px;
@@ -537,13 +529,7 @@ body {
         margin-top: 20px;
         font-weight: 800;
     }
-    #reversediabetes i{
-        font-size: 50px;
-        margin-left: 330px;
-        margin-top: -310px;
-        display: block;
-        color:#000;
-    }
+   
 
     #reversediabetes img {
         width: 100%; /* Responsive image */
@@ -565,20 +551,14 @@ body {
     font-weight: 800;
     }
     #bmi img {
-        width: 100%; /* Responsive image */
+        width: 106%; /* Responsive image */
         height: auto; /* Maintain aspect ratio */
-        max-height: 700px; /* Set a maximum height for the image */
+        max-height: 800px; /* Set a maximum height for the image */
         object-fit: contain; /* Ensures the image scales properly */
-        margin-left: -100px;
-        margin-top: 47px;
+        margin-right: 140px;
+        margin-top: 33px;
     }
-    #bmi i{
-        font-size: 50px;
-        margin-left: 330px;
-        margin-top: -260px;
-        display: block;
-        color:#000;
-}
+   
 
 #trainermeet{
     background-color: #000;
